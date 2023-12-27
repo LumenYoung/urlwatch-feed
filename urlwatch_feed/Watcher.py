@@ -89,10 +89,12 @@ def main():
 
     urls_storage = UrlsYaml(command_config.urls)
 
+    # you can condition list job by changing command_config.list = True
+    # TODO how to get this information not from std instead from internal input
+
     # setup urlwatcher
     urlwatch = Urlwatch(command_config, config_storage, cache_storage, urls_storage)
     urlwatch_command = UrlwatchCommand(urlwatch)
-
     # run urlwatcher
     urlwatch_command.run()
 
