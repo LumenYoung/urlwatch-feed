@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+
+  experiment_env:
+    image: lumeny/urlwatch-feed
+    container_name: urlfeed
+    tty: true
+    command: "tail -f /dev/null"
+    volumes:
+      - ./cfgs/urlwatch:/root/.config/urlwatch
+      - ./:/repo/
+
