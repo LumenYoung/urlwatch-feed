@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "urlwatch-feed"
+version = "0.1.0"
+description = "A feed generator using urlwatch and feedgen"
+authors = ["Lumen Yang <lumen.yang@lumeny.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+urlwatch = "^2.28"
+feedgen = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.9"
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
